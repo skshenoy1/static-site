@@ -1,6 +1,6 @@
 # Simple Website Using Github Pages
 Make a simple HTML website and publish it using Github Pages.  
-View example: https://zirafa.github.io/simple-website-template/
+View example: https://zirafa.github.io/static-site/
 
 - View the site: https://skshenoy1.github.io/simple-website-template
 
