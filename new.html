@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Page setup -->
     <meta charset="utf-8">
     <title>Housing</title>
     <meta name="description" content="Housing for students in the Research Triangle">
     <meta name="author" content="College student">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-  
-    <!-- Stylesheets -->
+
+    <!-- Normalize + Google Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- Custom styles -->
+    <!-- Custom CSS -->
     <link href="new.css" rel="stylesheet" type="text/css">
 
     <!-- jQuery -->
@@ -22,10 +22,11 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
             crossorigin="anonymous"></script>
   </head>
-  
+
   <body>
+    <!-- Header -->
     <header id="header">
-      <img src="houses.png" alt="Housing illustration">
+      <img src="houses.png" alt="Housing illustration" class="header-image">
       <h1>Helping College Students Find Housing in the Triangle</h1>
       <ul class="main-menu">
         <li><a href="#about">About</a></li>
@@ -33,42 +34,41 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
-   
-    <main id="container">
-      <div class="inner" id="content"> 
 
-        <!-- About Section -->
+    <!-- Main content -->
+    <main id="container">
+      <div class="inner" id="content">
+
         <section id="about" class="content-region">
           <h2>About</h2>
           <p>
-            Our platform helps college students navigate the housing market in the Research Triangle. By using student-friendly tools and recommendations, we aim to simplify the process and reduce stress.
+            Our platform helps college students navigate the housing market in the Research Triangle. By using student-friendly tools and recommendations, we simplify the process and reduce stress.
           </p>
         </section>
 
-        <!-- Housing Section -->
         <section id="housing" class="content-region">
           <h2>Housing</h2>
           <p>
-            Explore available housing options tailored to your preferences. Filter by location, price range, number of bedrooms, and amenities to find the perfect student home or apartment.
+            Explore available housing options tailored to your preferences. Filter by location, price, number of bedrooms, and amenities to find the perfect student home or apartment.
           </p>
         </section>
-          
-        <!-- Contact Section -->
+
         <section id="contact" class="content-region">
           <h2>Contact</h2>
           <p>
             Have questions or feedback? Reach out to us through GitHub, email, or our contact page. We’re here to help students find the best housing solutions.
           </p>
         </section>
-          
+
       </div>
     </main>
 
-    <footer>  
+    <!-- Footer -->
+    <footer>
       © 2025 Student Housing Project — All rights reserved.
     </footer>
-    
-    <!-- Custom JavaScript -->
+
+    <!-- Custom JS -->
     <script src="new.js"></script>
   </body>
 </html>
