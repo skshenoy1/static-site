@@ -1,79 +1,77 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
     <title>Housing</title>
-    <meta name="description" content="Housing for students in Research Triangle">
+    <meta name="description" content="Housing for students in the Research Triangle">
     <meta name="author" content="College student">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
     <link rel="icon" type="image/png" href="favicon.png">
   
     <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=sans-serif" rel="stylesheet" type="text/css" />
-   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <!-- Custom styles -->
-    <link href="new.css" rel="stylesheet" type="text/css" />
+    <link href="new.css" rel="stylesheet" type="text/css">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+            crossorigin="anonymous"></script>
   </head>
   
   <body>
-
     <header id="header">
-      <img src="houses-vectorportal-07.png">
+      <!-- Make sure this image is in the same folder as new.html -->
+      <img src="houses-vectorportal-07.png" alt="Illustration of housing options">
       <h1>Helping College Students Find Housing in the Triangle</h1>
       
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <!-- Menu links -->
       <ul class="main-menu">
-        <li><a href="#Home">home</a></li>
-        <li><a href="#About">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>                 
     </header>
    
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
+    <main id="container">
+      <div class="inner" id="content"> 
           
-          <div id="About" class="content-region hide">
-            <h2>Problem</h2>
-            <p>
-              Finding affordable housing that matches a person's budget, location, and lifestyle preferences is extremely difficult, especially for a college student. Most housing websites are too generic and show hundreds of results, forcing students to take time out of their already busy day to search through listings. Our website aims to solve this issue by simplifying the process through using specialized input from user to provide tailored recommendations. <a href="https://github.com/zirafa/simple-website-template">Fork this repository</a> to create your own site!
-            </p>
-          </div>
+        <section id="home" class="content-region">
+          <h2>Welcome</h2>
+          <p>
+            Welcome to our student housing search platform designed to make finding affordable, convenient housing in the Research Triangle easier than ever.
+          </p>
+        </section>
+
+        <section id="about" class="content-region">
+          <h2>Problem</h2>
+          <p>
+            Finding affordable housing that matches a student's budget, location, and lifestyle preferences is challenging. Most housing sites are too generic and time-consuming. Our site solves this by collecting simple user input and providing tailored housing recommendations.
+          </p>
+        </section>
           
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
-          </div>
+        <section id="contact" class="content-region">
+          <h2>Contact</h2>
+          <p>
+            Have feedback or questions? Reach out to us via GitHub or connect through our contact page.
+          </p>
+        </section>
           
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              Pellentesque nec nam aliquam sem et tortor consequat. Quisque sagittis purus sit amet volutpat consequat. Magna eget est lorem ipsum dolor. 
-            </p>
-          </div>
-          
-        </div>
       </div>
-    </div>
+    </main>
 
     <footer>  
-      Footer region
+      © 2025 Student Housing Project — All rights reserved.
     </footer>
     
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
     
   </body>
 </html>
