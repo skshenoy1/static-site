@@ -2,8 +2,8 @@
 
 - View the site: https://skshenoy1.github.io/static-site
 
-## How does this work?
-This website template uses CSS & JS to hide and show different parts of index.html and uses Github Pages to render the website from the gh-pages branch.
+## Credits
+Image by <a href=" https://www.vectorportal.com" >Vectorportal.com</a>,  <a class="external text" href="https://creativecommons.org/licenses/by/4.0/" >CC BY</a>
 
 ## Things to try
 - Edit index.html and change the title of the page
