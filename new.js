@@ -23,6 +23,20 @@
     // This will extract the region name from URL hash, and then load [region].html into the main #content div
     // var region = location.hash.toString() || '#first';
     // $('#content').load(region.slice(1) + '.html')
+
+    $(document).ready(function() {
+  // Smooth scroll for menu links
+  $('.main-menu a').on('click', function(e) {
+    e.preventDefault(); // Prevent default anchor jump
+
+    var target = $(this).attr('href'); // e.g., #about, #housing, #contact
+    var offset = $(target).offset().top; // Get position of target
+
+    $('html, body').animate({
+      scrollTop: offset
+    }, 600); // Scroll speed in milliseconds
+  });
+});
     
   });
   
