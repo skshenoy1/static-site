@@ -1,43 +1,26 @@
-// Wait for the document to load before running the script 
-(function ($) {
-  
-  // We use some Javascript and the URL #fragment to hide/show different parts of the page
-  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
-  $(window).on('load hashchange', function(){
-    
-    // First hide all content regions, then show the content-region specified in the URL hash 
-    // (or if no hash URL is found, default to first menu item)
-    $('.content-region').hide();
-    
-    // Remove any active classes on the main-menu
-    $('.main-menu a').removeClass('active');
-    var region = location.hash.toString() || $('.main-menu a:first').attr('href');
-    
-    // Now show the region specified in the URL hash
-    $(region).show();
-    
-    // Highlight the menu link associated with this region by adding the .active CSS class
-    $('.main-menu a[href="'+ region +'"]').addClass('active'); 
-
-    // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
-    // This will extract the region name from URL hash, and then load [region].html into the main #content div
-    // var region = location.hash.toString() || '#first';
-    // $('#content').load(region.slice(1) + '.html')
-
-    $(document).ready(function() {
-  // Smooth scroll for menu links
+$(document).ready(function() {
+  // Smooth scroll
   $('.main-menu a').on('click', function(e) {
-    e.preventDefault(); // Prevent default anchor jump
-
-    var target = $(this).attr('href'); // e.g., #about, #housing, #contact
-    var offset = $(target).offset().top; // Get position of target
-
-    $('html, body').animate({
-      scrollTop: offset
-    }, 600); // Scroll speed in milliseconds
+    e.preventDefault();
+    var target = $(this).attr('href');
+    var offset = $(target).offset().top;
+    $('html, body').animate({ scrollTop: offset }, 600);
   });
+
+  // Fade-in sections on scroll
+  function fadeInSections() {
+    $('.content-region').each(function() {
+      var top_of_element = $(this).offset().top;
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      if (bottom_of_window > top_of_element + 100) {
+        $(this).animate({ opacity: 1 }, 800);
+      }
+    });
+  }
+
+  // Initial check in case sections are already visible
+  fadeInSections();
+
+  // Check on scroll
+  $(window).on('scroll', fadeInSections);
 });
-    
-  });
-  
-})(jQuery);
